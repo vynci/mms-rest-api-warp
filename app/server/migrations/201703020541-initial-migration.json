@@ -19,10 +19,18 @@
                     "size": 100
                 },
                 "revoked_at": "datetime"
+            },
+            "conversation": {
+                "title": "text"
+            },
+            "message": {
+                "content": "text",
+                "author" : "string",
+                "conversationId" : "pointer"
             }
         }
     },
     "down": {
-        "drop": ["user", "session"]
+        "drop": ["user", "session", "conversation", "message"]
     }
 }

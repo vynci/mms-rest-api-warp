@@ -3,8 +3,8 @@ var path = require('path');
 
 module.exports = new WarpServer({
     security: {
-        apiKey: process.env.API_KEY || 'laser',
-        masterKey: process.env.MASTER_KEY || 'laserMaster'
+        apiKey: process.env.API_KEY || 'mmsAPIKey',
+        masterKey: process.env.MASTER_KEY || 'mmsMasterKey'
     },
     database: {
         host: process.env.DB_HOST || 'localhost',
