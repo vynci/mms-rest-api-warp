@@ -2,11 +2,15 @@
 var WarpServer = require('warp-server');
 
 module.exports = WarpServer.Model.create({
-    className: 'user',
+    className: 'message',
     keys: {
         // REQUIRED: Fields viewable in queries
-        viewable: ['username', 'email'],
+        viewable: ['content', 'author'],
         // REQUIRED: Fields editable in queries
-        actionable: ['username', 'password', 'email']
+        actionable: ['content', 'author']
+    },
+    validate: {
+    },
+    parse: {
     }
 });
