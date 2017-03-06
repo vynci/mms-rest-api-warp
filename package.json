@@ -1,0 +1,29 @@
+{
+  "name": "sample-project",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "compile-scripts-dev": "browserify -t [ babelify --presets [ es2015 react ] ] app/client/default.js > public/javascripts/default.js",
+    "compile-scripts": "browserify -t [ babelify --presets [ es2015 react ] ] -p [minifyify --no-map] app/client/default.js > public/javascripts/default.js",
+    "compile-styles": "lessc app/client/stylesheets/default.less | cleancss -o public/stylesheets/default.css -r app/client/stylesheets"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "moment-timezone": "^0.5.4",
+    "morgan": "^1.7.0",
+    "promise": "^7.1.1",
+    "underscore": "^1.8.3",
+    "warp-sdk-js": "^1.1.7",
+    "warp-server": "^2.3.18"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "clean-css": "^3.4.19",
+    "less": "^2.7.1",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "id": "201703020541-initial-migration",
+    "up": {
+        "create": {
+            "user": {
+                "username": {
+                    "type": "string",
+                    "size": "60",
+                    "addons": ["unique"]
+                },
+                "password": "password",
+                "email": "email"
+            },
+            "session": {
+                "user_id": "pointer",
+                "origin": "string",
+                "session_token": {
+                    "type": "string",
+                    "size": 100
+                },
+                "revoked_at": "datetime"
+            }
+        }
+    },
+    "down": {
+        "drop": ["user", "session"]
+    }
+}
